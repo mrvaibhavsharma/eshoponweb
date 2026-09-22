@@ -1,0 +1,18 @@
+Name: Vaibhavtesting
+on: 
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+  schedule:
+    -cron: '0 8-17 * * 15'
+Jobs:
+  build:
+    name: my test build
+    runs-on: window-latest-16cores
+    
+    steps:
+    -name: Echo the name
+    run: 
+      echo "Hello World"
