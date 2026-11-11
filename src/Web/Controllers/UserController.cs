@@ -40,6 +40,7 @@ public class UserController : ControllerBase
 
     [Route("Logout")]
     [HttpPost]
+    [ValidateAntiForgeryToken]
     [Authorize]
     [AllowAnonymous]
     public async Task<IActionResult> Logout()
